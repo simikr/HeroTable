@@ -1,0 +1,28 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ret="http://www.etisalat.ae/Middleware/ProductCatalogMgmt/RetrieveATGCatalogItemRequest.xsd" xmlns:app="http://www.etisalat.ae/Middleware/SharedResources/Common/ApplicationHeader.xsd" xmlns:com="http://www.etisalat.ae/Middleware/SharedResources/Common/Common.xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ret:RetrieveATGCatalogItemRequest>
+         <app:ApplicationHeader>
+            <app:TransactionID>Transaction_ID</app:TransactionID>
+            <app:RequestedSystem>Requested_System</app:RequestedSystem>
+            <!--Optional:-->
+            <app:RetryLimit>?</app:RetryLimit>
+            <!--Optional:-->
+            <app:RequestedDate>Requested_Date</app:RequestedDate>
+         </app:ApplicationHeader>
+         <ret:DataHeader>
+            <!--Optional:-->
+            <ret:CategoryId>Category_Id</ret:CategoryId>
+            <!--Optional:-->
+            <ret:PageNumber>Page_Number</ret:PageNumber>
+            <!--Optional:-->
+            <ret:ProductCount>Product_Count</ret:ProductCount>
+            <!--Zero or more repetitions:-->
+            <com:AdditionalInfo>
+               <com:Name>?</com:Name>
+               <com:Value>?</com:Value>
+            </com:AdditionalInfo>
+         </ret:DataHeader>
+      </ret:RetrieveATGCatalogItemRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
